@@ -1,1 +1,40 @@
 
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather Predictor 🌤️</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🌦️ Weather Predictor Indonesia</h1>
+    <p class="subtitle">Prediksi Cuaca Berbasis API BMKG & Gemini</p>
+
+    <div class="input-section">
+      <label for="province">Pilih Provinsi:</label>
+      <select id="province"></select>
+
+      <label for="city">Pilih Kabupaten/Kota:</label>
+      <select id="city"></select>
+
+      <button id="getWeather">Dapatkan Cuaca</button>
+    </div>
+
+    <div id="weatherResult" class="card hidden">
+      <h2 id="location"></h2>
+      <p id="temperature"></p>
+      <p id="condition"></p>
+      <p id="geminiPrediction" class="ai-result"></p>
+    </div>
+
+    <div class="api-section">
+      <input type="password" id="geminiKey" placeholder="Masukkan Gemini API Key..." />
+      <small>Masukkan API Key agar analisis AI aktif</small>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
